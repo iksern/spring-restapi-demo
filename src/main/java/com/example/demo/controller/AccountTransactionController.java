@@ -3,9 +3,6 @@ package com.example.demo.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.batch.core.Job;
-import org.springframework.batch.core.launch.JobLauncher;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,11 +20,6 @@ import com.example.demo.service.AccountTransactionService;
  */
 @RestController
 public class AccountTransactionController {
-    @Autowired
-    JobLauncher jobLauncher;
-
-    @Autowired
-    Job job;
 
     private AccountTransactionService accountTransactionService;
 

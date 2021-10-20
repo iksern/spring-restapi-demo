@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 /**
@@ -15,9 +13,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "ACCOUNT_TRANSACTION")
 public class AccountTransaction {
-    public static final String BY_ACCOUNT_NUMBER = "AccountTransaction.byAccountNumber";
-    public static final String BY_CUSTOMER_ID = "AccountTransaction.byCustomerId";
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "SERNO", nullable = false)
@@ -56,11 +51,11 @@ public class AccountTransaction {
         this.customerId = customerId;
     }
 
-    public Long getserNo() {
+    public Long getSerNo() {
         return serNo;
     }
 
-    public void setId(Long serNo) {
+    public void setSerNo(Long serNo) {
         this.serNo = serNo;
     }
 
